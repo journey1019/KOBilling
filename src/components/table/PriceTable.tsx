@@ -10,7 +10,7 @@ import { fetchMonthlyData, RowData } from '@/service/monthly/monthly';
 
 
 // 테이블 컴포넌트
-const MonthlyTable: React.FC = () => {
+const PriceTable: React.FC = () => {
     const [data, setData] = useState<RowData[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -85,8 +85,8 @@ const MonthlyTable: React.FC = () => {
 
     return (
         <div className="container mx-auto">
-            <h1 className="text-base font-bold">Monthly Data</h1>
-            <div className="z-1" style={{width: 'calc(100vw - 100px)'}}>
+            <h1 className="text-base font-bold mb-4">Monthly Data</h1>
+            <div className="z-1" style={{width: 'calc(100vw - 150px)'}}>
                 <MaterialReactTable
                     columns={columns}
                     data={data}
@@ -119,4 +119,4 @@ const MonthlyTable: React.FC = () => {
     );
 };
 
-export default MonthlyTable;
+export default PriceTable;

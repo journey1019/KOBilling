@@ -38,25 +38,25 @@ const Navbar: React.FC = () => {
 
                 {/* Sidebar Menu */}
                 <ul className="mt-4 space-y-2">
-                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700">
-                        <FaAddressCard size={20}/>
-                        {isSidebarOpen && <a href="/user">사용자 관리</a>}
+                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700 text-white hover:underline hover:text-blue-400 transition cursor-pointer">
+                        <Link href="/account"><FaAddressCard size={20}/></Link>
+                        {isSidebarOpen && <Link href="/account">사용자 관리</Link>}
                     </li>
-                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700">
-                        <FaChalkboard size={20}/>
-                        {isSidebarOpen && <span>단말기 관리</span>}
+                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700 text-white hover:underline hover:text-blue-400 transition cursor-pointer">
+                        <Link href="/device"><FaChalkboard size={20}/></Link>
+                        {isSidebarOpen && <Link href="/device">단말기 관리</Link>}
                     </li>
-                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700">
-                        <FaShoppingCart size={20}/>
-                        {isSidebarOpen && <span>Orders</span>}
+                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700 text-white hover:underline hover:text-blue-400 transition cursor-pointer">
+                        <Link href="/price"><FaShoppingCart size={20}/></Link>
+                        {isSidebarOpen && <Link href="/price">요금제 관리</Link>}
                     </li>
-                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700">
+                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700 text-white hover:underline hover:text-blue-400 transition cursor-pointer">
                         <FaChartBar size={20}/>
-                        {isSidebarOpen && <span>Reports</span>}
+                        {isSidebarOpen && <Link href="/">Reports</Link>}
                     </li>
-                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700">
+                    <li className="flex items-center space-x-4 px-4 py-2 hover:bg-gray-700 text-white hover:underline hover:text-blue-400 transition cursor-pointer">
                         <FaLayerGroup size={20}/>
-                        {isSidebarOpen && <span>Integrations</span>}
+                        {isSidebarOpen && <Link href="/">Integrations</Link>}
                     </li>
                 </ul>
             </div>
@@ -68,23 +68,23 @@ const Navbar: React.FC = () => {
                 }`}
             >
                 <div className="flex items-center justify-between px-6 py-4">
-                    <div className="text-2xl font-bold">KOREA ORBCOMM</div>
+                    <Link href="/" className="text-2xl font-bold hover:underline">KOREA ORBCOMM</Link>
                     <ul className="flex space-x-8">
                         <li className="flex items-center space-x-2 hover:text-blue-400 transition">
                             <FaChalkboard />
-                            <a href="/user">사용자 관리</a>
+                            <Link href="/user">사용자 관리</Link>
                         </li>
                         <li className="flex items-center space-x-2 hover:text-blue-400 transition">
                             <FaShoppingCart />
-                            <a href="/orders">Orders</a>
+                            <Link href="/orders">Orders</Link>
                         </li>
                         <li className="flex items-center space-x-2 hover:text-blue-400 transition">
                             <FaChartBar />
-                            <a href="/reports">Reports</a>
+                            <Link href="/reports">Reports</Link>
                         </li>
                         <li className="flex items-center space-x-2 hover:text-blue-400 transition">
                             <FaLayerGroup />
-                            <a href="/integrations">Integrations</a>
+                            <Link href="/integrations">Integrations</Link>
                         </li>
                     </ul>
                 </div>

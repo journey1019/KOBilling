@@ -1,7 +1,9 @@
+import AccountTable from "@/components/table/AccountTable";
+
 const UserPage = () => {
     return (
         <>
-            User Page
+            <AccountTable/>
         </>
     );
 };

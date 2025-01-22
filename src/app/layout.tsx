@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* 페이지 콘텐츠 */}
         <div className="flex-1 pt-[112px] bg-gray-100">
             <main className="min-h-screen">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
+                <div className="container mx-auto">{children}</div>
             </main>
             <Footer />
         </div>
